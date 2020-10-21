@@ -11,7 +11,23 @@ $ composer require zmo/weather -vvv
 
 ## Usage
 
-TODO
+use Zmo\Weather\Weather;
+
+高德开放平台应用 API Key
+$key = 'mock-key';
+$weather = new Weather($key);
+
+获取实时天气
+$weather->getLiveWeather('天津');
+
+获取天气预报
+$weather->getForecastsWeather('天津');
+
+获取实时天气(XML)
+$weather->getWeather('天津', 'base', 'xml');
+
+## 参数
+array|string getWeather(string $city, string $type = 'base', string $format = 'json')
 
 ## Contributing
 
